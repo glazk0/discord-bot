@@ -1,0 +1,6 @@
+{
+  "errors": {
+    "command_failed": "Une erreur s'est produite pendant l'exécution de cette commande. Réessaie dans un instant.",
+    "missing_permission": "Tu as besoin de la permission **Gérer le serveur** pour faire ça."
+  }
+}

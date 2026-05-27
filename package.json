@@ -1,0 +1,72 @@
+{
+  "name": "discord-bot",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Opinionated TypeScript boilerplate for Discord bots — discord.js, Drizzle/Postgres, Redis cache, i18n, sharding.",
+  "type": "module",
+  "imports": {
+    "#cache/*": "./src/cache/*.ts",
+    "#commands/*": "./src/commands/*.ts",
+    "#components/*": "./src/components/*.ts",
+    "#config/*": "./src/config/*.ts",
+    "#core/*": "./src/core/*.ts",
+    "#cron/*": "./src/cron/*.ts",
+    "#database/*": "./src/database/*.ts",
+    "#events/*": "./src/events/*.ts",
+    "#i18n/*": "./src/i18n/*.ts",
+    "#jobs/*": "./src/jobs/*.ts"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky",
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx --env-file-if-exists=.env src/database/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "commands:deploy": "tsx --env-file-if-exists=.env src/scripts/deploy-commands.ts"
+  },
+  "dependencies": {
+    "bullmq": "^5.77.4",
+    "croner": "^10.0.1",
+    "discord.js": "^14.26.4",
+    "drizzle-orm": "^0.45.2",
+    "glob": "^13.0.6",
+    "i18next": "^26.2.0",
+    "i18next-fs-backend": "^2.6.6",
+    "ioredis": "^5.10.1",
+    "pg": "^8.21.0",
+    "pino": "^10.3.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.31.10",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
+    "pino-pretty": "^13.1.3",
+    "tsc-alias": "^1.8.17",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  },
+  "lint-staged": {
+    "*.{ts,json}": [
+      "oxlint --fix",
+      "oxfmt"
+    ]
+  },
+  "engines": {
+    "node": ">=22.18.0",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@11.2.2"
+}

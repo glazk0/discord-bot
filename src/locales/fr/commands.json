@@ -1,0 +1,25 @@
+{
+  "ping": {
+    "description": "Vérifie la latence du bot.",
+    "reply": "Pong ! La latence WebSocket est de {{ms}} ms."
+  },
+  "user_info": {
+    "name": "Infos utilisateur",
+    "reply": "**{{tag}}**\n• ID : `{{id}}`\n• Compte créé : <t:{{createdAt}}:R>"
+  },
+  "message_info": {
+    "name": "Infos du message",
+    "reply": "Message de **{{author}}**\n• ID : `{{id}}`\n• Longueur : {{chars}} caractères"
+  },
+  "example": {
+    "button": {
+      "clicked": "Bouton cliqué. Args : {{args}}"
+    },
+    "modal": {
+      "submitted": "Modal envoyé."
+    },
+    "select": {
+      "picked": "Tu as choisi : {{values}}"
+    }
+  }
+}

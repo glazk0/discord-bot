@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "paths": {
+      "#cache/*": ["./src/cache/*"],
+      "#commands/*": ["./src/commands/*"],
+      "#components/*": ["./src/components/*"],
+      "#config/*": ["./src/config/*"],
+      "#core/*": ["./src/core/*"],
+      "#cron/*": ["./src/cron/*"],
+      "#database/*": ["./src/database/*"],
+      "#events/*": ["./src/events/*"],
+      "#i18n/*": ["./src/i18n/*"],
+      "#jobs/*": ["./src/jobs/*"]
+    },
+    "lib": ["ES2023"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.json", "drizzle.config.ts"]
+}

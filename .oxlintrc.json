@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "import", "unicorn", "promise"],
+  "env": {
+    "node": true,
+    "es2024": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn",
+    "style": "off"
+  },
+  "rules": {
+    "no-console": "warn",
+    "import/no-cycle": "error",
+    "import/no-named-as-default-member": "off",
+    "typescript/consistent-type-imports": "error"
+  },
+  "ignorePatterns": ["dist", "node_modules", "drizzle"],
+  "overrides": [
+    {
+      "files": ["src/scripts/**/*.ts", "src/config/logger.ts"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}

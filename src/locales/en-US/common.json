@@ -1,0 +1,6 @@
+{
+  "errors": {
+    "command_failed": "Something went wrong while running that command. Please try again in a moment.",
+    "missing_permission": "You need the **Manage Server** permission to do that."
+  }
+}

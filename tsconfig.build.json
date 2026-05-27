@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": false,
+    "sourceMap": true,
+    "removeComments": true,
+    "allowImportingTsExtensions": false,
+    "rewriteRelativeImportExtensions": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.json"],
+  "exclude": ["**/*.test.ts", "**/*.spec.ts", "dist", "node_modules"],
+  "tsc-alias": {
+    "resolveFullPaths": true
+  }
+}
