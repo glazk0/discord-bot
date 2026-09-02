@@ -1,0 +1,11 @@
+pre-commit:
+  piped: true
+  jobs:
+    - name: lint
+      run: pnpm exec oxlint --fix {staged_files}
+      glob: "*.ts"
+      stage_fixed: true
+    - name: format
+      run: pnpm exec oxfmt {staged_files}
+      glob: "*.{ts,json}"
+      stage_fixed: true
