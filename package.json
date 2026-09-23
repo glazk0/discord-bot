@@ -33,17 +33,17 @@
     "commands:deploy": "tsx --env-file-if-exists=.env src/scripts/deploy-commands.ts"
   },
   "dependencies": {
-    "bullmq": "^6.3.4",
+    "bullmq": "^6.3.8",
     "croner": "^10.0.1",
     "discord.js": "^14.27.0",
     "drizzle-orm": "^0.45.2",
     "glob": "^13.0.6",
-    "i18next": "^26.4.1",
-    "i18next-fs-backend": "^2.6.7",
+    "i18next": "^26.4.2",
+    "i18next-fs-backend": "^2.6.8",
     "ioredis": "^6.0.0",
     "pg": "^8.23.0",
     "pino": "^10.3.1",
-    "zod": "^4.5.4"
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/node": "^26.4.0",
